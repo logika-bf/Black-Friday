@@ -64,28 +64,22 @@
   }
 
   .loader-logo{
-    top:50%;
-    left:50%;
-    margin-top:-100px;
+    top:50%;left:50%;margin-top:-100px;
     transform:translate(-50%,-50%) scale(1.8);
     transform-origin:center center;
   }
   .loader-logo img{
-    height:42px;
-    display:block;
+    height:42px;display:block;
     filter:drop-shadow(0 0 24px rgba(139,92,246,.55));
   }
 
   .loader-mascot{
-    top:50%;
-    left:50%;
-    margin-top:120px;
+    top:50%;left:50%;margin-top:120px;
     transform:translate(-50%,-50%) scale(1.4);
     transform-origin:center center;
   }
   .loader-mascot img{
-    width:160px;
-    display:block;
+    width:160px;display:block;
     filter:drop-shadow(0 8px 30px rgba(255,122,0,.5));
   }
 
@@ -104,47 +98,33 @@
   body.intro .loader-mascot{opacity:1;}
 
   body.loaded .loader-logo{
-    top:12px;
-    left:16px;
-    margin-top:0;
+    top:12px;left:16px;margin-top:0;
     transform:translate(0,0) scale(.75);
     transform-origin:top left;
   }
   body.loaded .loader-mascot{
-    top:auto;
-    left:auto;
-    margin-top:0;
-    bottom:6px;
-    right:10px;
+    top:auto;left:auto;margin-top:0;
+    bottom:6px;right:10px;
     transform:scale(.42);
     transform-origin:bottom right;
     opacity:.9;
   }
 
   .hero{
-    position:relative;
-    z-index:2;
-    text-align:center;
-    max-width:760px;
-    margin-bottom:10px;
-    flex-shrink:0;
+    position:relative;z-index:2;text-align:center;
+    max-width:760px;margin-bottom:10px;flex-shrink:0;
   }
 
   .hero-content{
-    opacity:0;
-    transform:translateY(18px);
+    opacity:0;transform:translateY(18px);
     transition:opacity .7s ease .2s, transform .7s cubic-bezier(.4,0,.2,1) .2s;
   }
   body.loaded .hero-content{opacity:1;transform:translateY(0);}
 
   .tag{
-    display:inline-block;
-    padding:5px 16px;
-    border-radius:999px;
+    display:inline-block;padding:5px 16px;border-radius:999px;
     background:linear-gradient(90deg,var(--orange),var(--purple));
-    font-weight:900;
-    font-size:.66rem;
-    letter-spacing:2.5px;
+    font-weight:900;font-size:.66rem;letter-spacing:2.5px;
     box-shadow:0 0 22px rgba(255,122,0,.55);
     animation:pulseTag 2.2s ease-in-out infinite;
   }
@@ -153,9 +133,7 @@
   h1{
     margin:8px 0 4px;
     font-size:clamp(1.3rem, 4.5vw, 2.4rem);
-    font-weight:900;
-    line-height:1.02;
-    letter-spacing:-1px;
+    font-weight:900;line-height:1.02;letter-spacing:-1px;
     background:linear-gradient(180deg,#fff 0%,var(--orange-light) 45%,var(--orange) 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
     filter:drop-shadow(0 4px 18px rgba(255,122,0,.4));
@@ -169,20 +147,14 @@
   .sub{
     color:var(--text-muted);
     font-size:clamp(.72rem, 1.6vw, .92rem);
-    font-weight:500;
-    margin-top:2px;
+    font-weight:500;margin-top:2px;
   }
   .sub b{color:var(--orange-light);}
 
   .stripe{
-    margin-top:8px;
-    padding:5px 12px;
-    border-radius:10px;
+    margin-top:8px;padding:5px 12px;border-radius:10px;
     background:repeating-linear-gradient(45deg,var(--orange) 0 12px,#111 12px 24px);
-    color:#111;
-    font-weight:900;
-    font-size:.6rem;
-    letter-spacing:2px;
+    color:#111;font-weight:900;font-size:.6rem;letter-spacing:2px;
     text-shadow:0 0 6px var(--orange);
     display:inline-block;
     box-shadow:0 0 24px rgba(255,122,0,.25);
@@ -190,12 +162,9 @@
   .stripe span{background:var(--orange);padding:2px 10px;border-radius:6px;}
 
   .board{
-    position:relative;
-    z-index:2;
-    flex:1 1 auto;
-    min-height:0;
-    width:100%;
-    max-width:1200px;
+    position:relative;z-index:2;
+    flex:1 1 auto;min-height:0;
+    width:100%;max-width:1200px;
     display:grid;
     grid-template-columns:repeat(5, minmax(0,1fr));
     grid-template-rows:repeat(4, minmax(0,1fr));
@@ -203,24 +172,16 @@
   }
 
   .card{
-    position:relative;
-    min-width:0;
-    min-height:0;
-    perspective:1200px;
-    background:none;
-    border:none;
-    padding:0;
-    cursor:pointer;
-    font-family:inherit;
+    position:relative;min-width:0;min-height:0;
+    perspective:1200px;background:none;border:none;padding:0;
+    cursor:pointer;font-family:inherit;
     animation:cardIn .55s cubic-bezier(.2,.9,.3,1.4) both;
     transition:opacity .4s, filter .4s;
   }
   @keyframes cardIn{from{opacity:0;transform:translateY(22px) scale(.88);}to{opacity:1;transform:none;}}
 
   .card-inner{
-    position:relative;
-    width:100%;
-    height:100%;
+    position:relative;width:100%;height:100%;
     transform-style:preserve-3d;
     transition:transform .85s cubic-bezier(.2,.8,.2,1);
   }
@@ -229,19 +190,10 @@
   .card.flipped .card-inner{transform:rotateY(180deg);}
 
   .face{
-    position:absolute;
-    inset:0;
-    border-radius:14px;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:4px;
-    padding:8px 6px;
-    text-align:center;
-    overflow:hidden;
+    position:absolute;inset:0;border-radius:14px;
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:4px;padding:8px 6px;text-align:center;overflow:hidden;
   }
 
   .front{
@@ -250,10 +202,8 @@
     box-shadow:0 0 20px rgba(255,122,0,.08), inset 0 0 30px rgba(139,92,246,.06);
   }
   .front::after{
-    content:'';
-    position:absolute;
-    top:-60%;left:-160%;
-    width:55%;height:220%;
+    content:'';position:absolute;
+    top:-60%;left:-160%;width:55%;height:220%;
     background:linear-gradient(90deg,transparent,rgba(255,122,0,.3),transparent);
     transform:rotate(22deg);
     animation:shine 3.6s infinite;
@@ -262,8 +212,7 @@
 
   .num{
     font-size:clamp(1.1rem, 3.2vmin, 2rem);
-    font-weight:900;
-    line-height:1;
+    font-weight:900;line-height:1;
     background:linear-gradient(180deg,#fff,var(--orange));
     -webkit-background-clip:text;background-clip:text;color:transparent;
     filter:drop-shadow(0 0 12px rgba(255,122,0,.5));
@@ -280,6 +229,7 @@
     border:2px solid #ffe0c0;
     color:#120800;
     box-shadow:0 0 40px rgba(255,122,0,.55);
+    padding:8px 6px 28px;
   }
   .back .icon{
     font-size:clamp(1rem, 3vmin, 1.7rem);
@@ -289,14 +239,50 @@
   .back .ptitle{
     font-weight:900;
     font-size:clamp(.55rem, 1.4vmin, .82rem);
-    line-height:1.15;
-    letter-spacing:.1px;
+    line-height:1.15;letter-spacing:.1px;
     word-break:break-word;
     text-shadow:0 1px 0 rgba(255,255,255,.4);
     display:-webkit-box;
     -webkit-line-clamp:4;
     -webkit-box-orient:vertical;
     overflow:hidden;
+  }
+
+  .reserved-on-card{
+    position:absolute;
+    bottom:4px;left:4px;right:4px;
+    padding:3px 5px;
+    background:rgba(0,0,0,.55);
+    border-radius:7px;
+    display:flex;flex-direction:column;align-items:center;
+    gap:1px;
+    line-height:1;
+    opacity:0;
+    transition:opacity .35s ease .15s;
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    border:1px solid rgba(255,224,102,.35);
+  }
+  .card.picked .reserved-on-card{opacity:1;}
+
+  .reserved-small{
+    font-size:clamp(.32rem, .75vmin, .48rem);
+    color:rgba(255,255,255,.7);
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .reserved-small-name{
+    font-size:clamp(.52rem, 1.3vmin, .78rem);
+    color:#ffe066;
+    font-weight:900;
+    margin-top:1px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:100%;
+    text-shadow:0 1px 2px rgba(0,0,0,.5);
   }
 
   .card.picked{cursor:default;filter:drop-shadow(0 0 26px rgba(255,122,0,.55));}
@@ -312,16 +298,10 @@
   .card.shake{animation:shake .45s;}
 
   .controls{
-    position:relative;
-    z-index:2;
-    margin-top:10px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
+    position:relative;z-index:2;margin-top:10px;
+    display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
     flex-shrink:0;
-    opacity:0;
-    transform:translateY(12px);
+    opacity:0;transform:translateY(12px);
     transition:opacity .6s ease .4s, transform .6s ease .4s;
   }
   body.loaded .controls{opacity:1;transform:translateY(0);}
@@ -329,7 +309,7 @@
   .btn{
     font-family:inherit;font-weight:900;font-size:.85rem;letter-spacing:1px;
     padding:11px 26px;border-radius:12px;border:none;cursor:pointer;
-    transition:transform .18s, box-shadow .18s;
+    transition:transform .18s, box-shadow .18s, background .18s;
   }
   .btn.primary{
     background:linear-gradient(135deg,var(--orange),var(--purple));
@@ -338,6 +318,13 @@
   }
   .btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,122,0,.6);}
   .btn.primary:active{transform:translateY(0) scale(.97);}
+
+  .btn.ghost{
+    background:rgba(255,255,255,.06);
+    color:#ddd;
+    border:1.5px solid rgba(255,255,255,.16);
+  }
+  .btn.ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
 
   .modal{
     position:fixed;inset:0;z-index:60;
@@ -380,6 +367,83 @@
   }
   .modal-card p{color:var(--text-muted);font-size:.9rem;line-height:1.5;margin-bottom:22px;}
 
+  /* ---- МОДАЛКА ІМЕНІ ---- */
+  .name-card h2{
+    font-size:clamp(1.2rem, 4.5vw, 1.55rem);
+  }
+  .name-card p{
+    margin-bottom:16px;
+  }
+  .name-input{
+    width:100%;
+    padding:14px 18px;
+    font-family:inherit;
+    font-size:1rem;
+    font-weight:700;
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    border:2px solid rgba(139,92,246,.4);
+    border-radius:12px;
+    outline:none;
+    text-align:center;
+    transition:border-color .2s, background .2s, box-shadow .2s;
+    margin-bottom:16px;
+    -webkit-appearance:none;
+    appearance:none;
+  }
+  .name-input::placeholder{
+    color:#7a6a8a;
+    font-weight:500;
+  }
+  .name-input:focus{
+    border-color:var(--orange);
+    background:rgba(255,122,0,.08);
+    box-shadow:0 0 24px rgba(255,122,0,.28);
+  }
+  .name-input.shake{animation:shake .45s;}
+
+  .name-actions{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+  }
+  .name-actions .btn{
+    flex:1;
+    padding:12px 14px;
+    font-size:.82rem;
+  }
+
+  /* ---- БЕЙДЖ У РЕЗУЛЬТАТІ ---- */
+  .reserved-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(255,122,0,.12);
+    border:1.5px solid rgba(255,122,0,.4);
+    margin-bottom:22px;
+    flex-wrap:wrap;
+    justify-content:center;
+    max-width:100%;
+  }
+  .reserved-label{
+    font-size:.65rem;
+    color:var(--text-muted);
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    font-weight:800;
+  }
+  .reserved-name{
+    font-size:.95rem;
+    font-weight:900;
+    color:var(--orange-light);
+    max-width:220px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
   .confetti{
     position:fixed;top:-30px;z-index:100;pointer-events:none;border-radius:2px;
     animation:fall linear forwards;
@@ -393,7 +457,7 @@
     body{padding:44px 10px 60px;}
     .board{grid-template-columns:repeat(4, minmax(0,1fr));grid-template-rows:repeat(5, minmax(0,1fr));gap:6px;}
     .hint{display:none;}
-    .back .ptitle{-webkit-line-clamp:5;}
+    .back .ptitle{-webkit-line-clamp:3;}
   }
   @media(max-height:700px){
     body{padding:36px 12px 54px;}
@@ -434,21 +498,42 @@
     <button class="btn primary" id="reset">🔄 Нова роздача</button>
   </div>
 
+  <!-- МОДАЛКА РЕЗУЛЬТАТУ -->
   <div class="modal" id="modal">
     <div class="modal-card">
       <div class="modal-icon" id="mIcon">🎁</div>
       <div class="modal-label">ТВОЯ ПЛЮШКА</div>
       <h2 id="mTitle">—</h2>
       <p id="mDesc">—</p>
+      <div class="reserved-badge">
+        <span class="reserved-label">🎫 Заброньована за</span>
+        <span class="reserved-name" id="mName">—</span>
+      </div>
       <button class="btn primary" id="mClose">Далі 🎁</button>
+    </div>
+  </div>
+
+  <!-- МОДАЛКА ІМЕНІ -->
+  <div class="modal" id="nameModal">
+    <div class="modal-card name-card">
+      <div class="modal-icon">✍️</div>
+      <div class="modal-label">ХТО ТЯГНЕ?</div>
+      <h2>Введи своє ім'я</h2>
+      <p>Щоб забронювати цю плюшку саме за тобою</p>
+      <input type="text" id="nameInput" class="name-input"
+             placeholder="Твоє ім'я..." maxlength="24" autocomplete="off">
+      <div class="name-actions">
+        <button class="btn ghost" id="nameCancel">Скасувати</button>
+        <button class="btn primary" id="nameConfirm">Тягнути 🎁</button>
+      </div>
     </div>
   </div>
 
 <script>
 /* ================= ДАНІ (20 карток) ================= */
 const PERKS = [
-  { icon:'🧠', title:'+5 логіків',
-    desc:'5 логіків падають прямо в твою скарбничку. Просто так. Безкоштовно. З любов`ю.' },
+  { icon:'🧠', title:'+3 логіки',
+    desc:'Три логіки падають прямо в твою скарбничку. Просто так. Безкоштовно. З любов`ю.' },
   { icon:'🔁', title:'Повторний шанс',
     desc:'Якщо щось пішло не так — можеш спробувати ще раз. Один раз. Але це вже багато!' },
   { icon:'💰', title:'+3 логіки',
@@ -490,11 +575,24 @@ const PERKS = [
 ];
 
 /* ================= СТАН ================= */
-const board  = document.getElementById('board');
-const modal  = document.getElementById('modal');
-const mIcon  = document.getElementById('mIcon');
-const mTitle = document.getElementById('mTitle');
-const mDesc  = document.getElementById('mDesc');
+const board     = document.getElementById('board');
+const modal     = document.getElementById('modal');
+const mIcon     = document.getElementById('mIcon');
+const mTitle    = document.getElementById('mTitle');
+const mDesc     = document.getElementById('mDesc');
+const mName     = document.getElementById('mName');
+const nameModal = document.getElementById('nameModal');
+const nameInput = document.getElementById('nameInput');
+
+let pendingCard  = null;
+let pendingPerk  = null;
+let lastUsedName = '';
+
+/* ---- відновлюємо останнє імʼя з localStorage ---- */
+try{
+  const saved = localStorage.getItem('bf_lastName');
+  if (saved) lastUsedName = saved;
+}catch(e){ /* localStorage може бути недоступним */ }
 
 /* ================= УТИЛІТИ ================= */
 function shuffle(arr){
@@ -546,6 +644,10 @@ function render(){
         <div class="face back">
           <span class="icon">${perk.icon}</span>
           <span class="ptitle">${perk.title}</span>
+          <div class="reserved-on-card">
+            <span class="reserved-small">Заброньована за</span>
+            <span class="reserved-small-name"></span>
+          </div>
         </div>
       </div>`;
 
@@ -563,20 +665,78 @@ function pick(card, perk){
     return;
   }
 
+  pendingCard = card;
+  pendingPerk = perk;
+
+  /* підставляємо попереднє імʼя (якщо є) */
+  nameInput.value = lastUsedName;
+
+  nameModal.classList.add('show');
+
+  setTimeout(() => {
+    nameInput.focus();
+    /* виділяємо весь текст, щоб нове ім'я одразу замінило старе */
+    if (nameInput.value) nameInput.select();
+  }, 350);
+}
+
+/* ================= ПІДТВЕРДЖЕННЯ ІМЕНІ ================= */
+function confirmName(){
+  const name = nameInput.value.trim();
+
+  if (!name){
+    nameInput.classList.remove('shake');
+    void nameInput.offsetWidth;
+    nameInput.classList.add('shake');
+    nameInput.focus();
+    return;
+  }
+
+  lastUsedName = name;
+  try{ localStorage.setItem('bf_lastName', name); }catch(e){}
+
+  nameModal.classList.remove('show');
+
+  const card = pendingCard;
+  const perk = pendingPerk;
+  pendingCard = null;
+  pendingPerk = null;
+
+  if (!card || !perk) return;
+
+  card.querySelector('.reserved-small-name').textContent = name;
+
   card.classList.add('flipped', 'picked');
 
   confetti();
   setTimeout(() => confetti(), 400);
-  setTimeout(() => showResult(perk), 780);
+
+  setTimeout(() => showResult(perk, name), 780);
 }
 
-/* ================= МОДАЛКА ================= */
-function showResult(perk){
+/* ================= СКАСУВАННЯ ================= */
+function cancelName(){
+  nameModal.classList.remove('show');
+  pendingCard = null;
+  pendingPerk = null;
+}
+
+/* ================= МОДАЛКА РЕЗУЛЬТАТУ ================= */
+function showResult(perk, name){
   mIcon.textContent  = perk.icon;
   mTitle.textContent = perk.title;
   mDesc.textContent  = perk.desc;
+  mName.textContent  = name;
   modal.classList.add('show');
 }
+
+/* ================= ПОДІЇ ================= */
+document.getElementById('nameConfirm').addEventListener('click', confirmName);
+document.getElementById('nameCancel').addEventListener('click', cancelName);
+
+nameInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter'){ e.preventDefault(); confirmName(); }
+});
 
 document.getElementById('mClose').addEventListener('click', () => {
   modal.classList.remove('show');
@@ -586,13 +746,26 @@ modal.addEventListener('click', e => {
   if (e.target === modal) modal.classList.remove('show');
 });
 
+nameModal.addEventListener('click', e => {
+  if (e.target === nameModal) cancelName();
+});
+
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') modal.classList.remove('show');
+  if (e.key !== 'Escape') return;
+
+  if (nameModal.classList.contains('show')){
+    cancelName();
+  } else if (modal.classList.contains('show')){
+    modal.classList.remove('show');
+  }
 });
 
 /* ================= КНОПКА СКИДАННЯ ================= */
 document.getElementById('reset').addEventListener('click', () => {
   modal.classList.remove('show');
+  nameModal.classList.remove('show');
+  pendingCard = null;
+  pendingPerk = null;
   render();
 });
 
